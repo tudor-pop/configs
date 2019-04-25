@@ -1,139 +1,129 @@
-On branch master
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-	new file:   .gitignore
-	modified:   .vimrc
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	.3T/
-	.CFUserTextEncoding
-	.Trash/
-	.android/
-	.armitage.prop
-	.babel.json
-	.bash_history
-	.bash_profile
-	.bash_profile-anaconda3.bak
-	.bash_profile.pysave
-	.bash_sessions/
-	.bashrc
-	.cargo/
-	.cocoapods/
-	.conda/
-	.condarc
-	.config/
-	.dlv/
-	.docker/
-	.dotnet/
-	.dropbox/
-	.eclipse/
-	.electron-gyp/
-	.electron/
-	.electrum-stratis/
-	.electrum/
-	.emulator_console_auth_token
-	.ethash/
-	.fastlane/
-	.gem/
-	.gitconfig
-	.gitflow_export
-	.gitignore_global
-	.glide/
-	.gnupg/
-	.gnupg_pre_2.1/
-	.gradle/
-	.h2.server.properties
-	.hgignore_global
-	.httpie/
-	.ideaLibSources/
-	.idlerc/
-	.ipfs/
-	.ipynb_checkpoints/
-	.ipython/
-	.iterm2_shell_integration.bash
-	.ivy2/
-	.jsipfs/
-	.jupyter/
-	.keras/
-	.kotlinc_history
-	.lldb/
-	.local/
-	.matplotlib/
-	.mkshrc
-	.msf4/
-	.multirust
-	.mysql_history
-	.nix-defexpr/
-	.nix-profile
-	.node-gyp/
-	.node_repl_history
-	.npm/
-	.oh-my-zsh/
-	.oracle_jre_usage/
-	.p2/
-	.pgadmin_histoqueries
-	.pgpass
-	.plotly/
-	.profile
-	.psql_history
-	.pylint.d/
-	.python_history
-	.qri/
-	.rbenv/
-	.rnd
-	.rustup/
-	.rvm/
-	.spyder-py3/
-	.sqlite_history
-	.ssh/
-	.stCommitMsg
-	.subversion/
-	.tooling/
-	.tor/
-	.upterm/
-	.v8flags.5.8.283.41.33d890d33f91d52fc9b405a0dda65336.json
-	.v8flags.6.2.414.46-node.15.33d890d33f91d52fc9b405a0dda65336.json
-	.v8flags.6.2.414.46-node.22.33d890d33f91d52fc9b405a0dda65336.json
-	.vim/
-	.viminfo
-	.vnc/
-	.vscode/
-	.wget-hsts
-	.yarnrc
-	.zcompdump-MacBook Pro (2)-5.3
-	.zcompdump-MacBook Pro (2)-5.6.2
-	.zcompdump-MacBook Pro (2)-5.7.1
-	.zcompdump-MacBook Pro-5.3
-	.zlogin
-	.zoomus/
-	.zprofile
-	.zsh_history
-	.zshrc.pre-oh-my-zsh
-	Applications/
-	Desktop/
-	Documents/
-	Downloads/
-	Dropbox/
-	Google Drive/
-	IdeaProjects/
-	Library/
-	Movies/
-	Music/
-	PersonalProjects/
-	Pictures/
-	Private/
-	Public/
-	Torrent/
-	VirtualBox VMs/
-	Work/
-	configs/
-	go/
-	lncli-web/
-	node_modules/
-	package-lock.json
-	package.json
-	vimtest
+.3T/
+.CFUserTextEncoding
+.Trash/
+.android/
+.armitage.prop
+.babel.json
+.bash_history
+.bash_profile
+.bash_profile-anaconda3.bak
+.bash_profile.pysave
+.bash_sessions/
+.bashrc
+.cargo/
+.cocoapods/
+.conda/
+.condarc
+.config/
+.dlv/
+.docker/
+.dotnet/
+.dropbox/
+.eclipse/
+.electron-gyp/
+.electron/
+.electrum-stratis/
+.electrum/
+.emulator_console_auth_token
+.ethash/
+.fastlane/
+.gem/
+.gitconfig
+.gitflow_export
+.gitignore_global
+.glide/
+.gnupg/
+.gnupg_pre_2.1/
+.gradle/
+.h2.server.properties
+.hgignore_global
+.httpie/
+.ideaLibSources/
+.idlerc/
+.ipfs/
+.ipynb_checkpoints/
+.ipython/
+.iterm2_shell_integration.bash
+.ivy2/
+.jsipfs/
+.jupyter/
+.keras/
+.kotlinc_history
+.lldb/
+.local/
+.matplotlib/
+.mkshrc
+.msf4/
+.multirust
+.mysql_history
+.nix-defexpr/
+.nix-profile
+.node-gyp/
+.node_repl_history
+.npm/
+.oh-my-zsh/
+.oracle_jre_usage/
+.p2/
+.pgadmin_histoqueries
+.pgpass
+.plotly/
+.profile
+.psql_history
+.pylint.d/
+.python_history
+.qri/
+.rbenv/
+.rnd
+.rustup/
+.rvm/
+.spyder-py3/
+.sqlite_history
+.ssh/
+.stCommitMsg
+.subversion/
+.tooling/
+.tor/
+.upterm/
+.v8flags.5.8.283.41.33d890d33f91d52fc9b405a0dda65336.json
+.v8flags.6.2.414.46-node.15.33d890d33f91d52fc9b405a0dda65336.json
+.v8flags.6.2.414.46-node.22.33d890d33f91d52fc9b405a0dda65336.json
+.vim/
+.viminfo
+.vnc/
+.vscode/
+.wget-hsts
+.yarnrc
+.zcompdump-MacBook Pro (2)-5.3
+.zcompdump-MacBook Pro (2)-5.6.2
+.zcompdump-MacBook Pro (2)-5.7.1
+.zcompdump-MacBook Pro-5.3
+.zlogin
+.zoomus/
+.zprofile
+.zsh_history
+.zshrc.pre-oh-my-zsh
+Applications/
+Desktop/
+Documents/
+Downloads/
+Dropbox/
+Google Drive/
+IdeaProjects/
+Library/
+Movies/
+Music/
+PersonalProjects/
+Pictures/
+Private/
+Public/
+Torrent/
+VirtualBox VMs/
+Work/
+configs/
+go/
+lncli-web/
+node_modules/
+package-lock.json
+package.json
+vimtest
 
