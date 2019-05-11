@@ -8,10 +8,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/joshdick/onedark.vim'
 Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'jiangmiao/auto-pairs'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'scrooloose/nerdcommenter'
-
+Plug 'ekalinin/Dockerfile.vim'
 call plug#end()
 
 
@@ -20,6 +21,8 @@ set number
 set hlsearch
 set relativenumber
 set noshowmode
+set laststatus=2
+
 syntax on
 filetype on
 colorscheme onedark
@@ -32,3 +35,6 @@ set tabstop=4
 set shiftwidth=4
 " on pressing tab, insert 4 spaces
 " set expandtab
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
