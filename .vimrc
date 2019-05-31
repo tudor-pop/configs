@@ -10,7 +10,6 @@ Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'jiangmiao/auto-pairs'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'ekalinin/Dockerfile.vim'
 call plug#end()
@@ -27,8 +26,6 @@ syntax on
 filetype on
 colorscheme onedark
 filetype plugin indent on
-inoremap jk <esc>
-inoremap kj <esc>
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
@@ -38,3 +35,5 @@ set shiftwidth=4
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
+inoremap <leader>; <C-o>A;
+
