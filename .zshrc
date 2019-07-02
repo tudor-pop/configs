@@ -3,7 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/tudor/.oh-my-zsh"
-export PATH="$HOME/.fastlane/bin:$PATH"
+#export PATH="$HOME/.fastlane/bin:$PATH"
 source ~/.profile
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
