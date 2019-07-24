@@ -7,7 +7,16 @@ sudo apt-get install zsh
 # change the default shell of the root user to zsh with the chsh command below.
 
 sudo apt install wget git
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+
+### EXA
+wget https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
+sudo apt-get install unzip
+unzip exa*.zip
+sudo mv exa-linux-x86_64 /usr/local/bin/exa
+rm exa-*.zip
+sudo apt-get remove -y unzip 
 
 sudo chsh -s "$(command -v zsh)" "${USER}"
 echo $SHELL
