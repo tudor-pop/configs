@@ -1,0 +1,59 @@
+version: '3.1'
+
+services:
+  config:
+    build:
+      context: config-service
+    image: registry.gitlab.com/flyapp/config-service
+    #    Because Docker container names must be unique, you cannot scale a service
+    #    beyond 1 container if you have specified a custom name. Attempting to do so results in an error.
+    #Note: This option is ignored when deploying a stack in swarm mode with a (version 3) Compose file.
+    container_name: config-service
+    restart: unless-stopped
+    ports:
+      - 8888:8888
+    environment:
+      PROFILE: default
+
+  eureka:
+    build:
+      context: eureka-service
+    image: registry.gitlab.com/flyapp/eureka-service
+    container_name: eureka-service
+    restart: unless-stopped
+    ports:
+      - 8761:8761
+    environment:
+      PROFILE: cloud
+
+  gateway:
+    build:
+      context: gateway-service
+    image: registry.gitlab.com/flyapp/gateway-service
+    container_name: gateway-service
+    restart: unless-stopped
+    ports:
+      - 8088:8088
+    environment:
+      PROFILE: cloud
+
+  account:
+    build:
+      context: account-service
+    image: registry.gitlab.com/flyapp/account-service
+    container_name: account-service
+    restart: unless-stopped
+    ports:
+      - 8082:8082
+    environment:
+      PROFILE: cloud
+ fly:
+    build:
+      context: fly-easy-service
+    image: registry.gitlab.com/flyapp/fly-easy-service
+    container_name: fly-service
+    restart: unless-stopped
+    ports:
+      - 8081:8081
+    environment:
+      PROFILE: cloud
