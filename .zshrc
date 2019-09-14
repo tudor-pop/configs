@@ -3,6 +3,9 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH="$GOBIN:$PATH"
 #export PATH="$HOME/.fastlane/bin:$PATH"
 source ~/.profile
 # Set name of the theme to load --- if set to "random", it will
@@ -107,3 +110,5 @@ export NVM_DIR="$HOME/.nvm"
 # https://github.com/ogham/exa
 # brew install exa
 alias ll="exa -abghHlS -L 1" 
+setopt HIST_IGNORE_SPACE
+
