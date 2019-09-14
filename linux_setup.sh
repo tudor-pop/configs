@@ -6,12 +6,13 @@ sudo apt-get upgrade
 sudo apt-get install zsh
 # change the default shell of the root user to zsh with the chsh command below.
 
-sudo apt install wget git
+sudo apt install wget git -y
+# OH-MY-ZSH
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 ### EXA
 wget https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
-sudo apt-get install unzip
+sudo apt-get install unzip -y
 unzip exa*.zip
 sudo mv exa-linux-x86_64 /usr/local/bin/exa
 rm exa-*.zip
