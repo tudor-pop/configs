@@ -43,7 +43,7 @@ sudo mv exa-linux-x86_64 /usr/bin/exa
 rm ./*.zip
 
 echo "alias ll=\"exa -abghHlS -L 1\"" >> ~/.profile
-. ~/.profile
+source ~/.profile
 
 # Vim setup
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
