@@ -5,7 +5,8 @@ sudo apt-get upgrade
 # install zsh
 sudo apt-get install zsh
 # change the default shell of the root user to zsh with the chsh command below.
-
+cp .zshrc ~
+cp .vimrc ~
 sudo apt install wget git -y
 # OH-MY-ZSH
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
