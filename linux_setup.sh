@@ -8,7 +8,7 @@ sudo apt-get install zsh
 cp .zshrc ~
 sudo apt install wget git -y
 # OH-MY-ZSH
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sh -y -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 ### EXA
 wget https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
@@ -16,7 +16,6 @@ sudo apt-get install unzip -y
 unzip exa*.zip
 sudo mv exa-linux-x86_64 /usr/local/bin/exa
 rm exa-*.zip
-sudo apt-get remove -y unzip 
 
 sudo chsh -s "$(command -v zsh)" "${USER}"
 echo $SHELL
@@ -36,10 +35,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions docker docker-compose)/g' ~/.zshrc
 exec zsh
 
-wget https://github.com/ogham/exa/releases/download/v0.8.0/exa-linux-x86_64-0.8.0.zip
-unzip exa-linux-x86_64-0.8.0.zip
-sudo mv exa-linux-x86_64 /usr/bin/exa
-rm ./*.zip
 
 echo "alias ll=\"exa -abghHlS -L 1\"" >> ~/.profile
 source ~/.profile
