@@ -8,7 +8,8 @@ sudo apt-get install zsh
 cp .zshrc ~
 sudo apt install wget git -y
 # OH-MY-ZSH
-sh -y -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sh -y -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 
 ### EXA
 wget https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
