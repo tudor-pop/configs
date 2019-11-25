@@ -1,18 +1,18 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
-export PATH="$GOBIN:$PATH"
-#export PATH="$HOME/.fastlane/bin:$PATH"
+source ~/antigen.sh
 source ~/.profile
+antigen use oh-my-zsh
+
+antigen bundle zsh-user/zsh-syntax-highlighting
+
+antigen theme denysdovhan/spaceship-prompt
+
+# finish applying angigen
+antigen apply
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -67,9 +67,6 @@ ZSH_THEME="spaceship"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git osx zsh-autosuggestions)
-
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"

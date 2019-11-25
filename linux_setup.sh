@@ -7,9 +7,8 @@ sudo apt-get install zsh
 # change the default shell of the root user to zsh with the chsh command below.
 cp .zshrc ~
 sudo apt install wget git -y
-# OH-MY-ZSH
-sh -y -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+curl -L git.io/antigen > ~/antigen.zsh
 
 ### EXA
 wget https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
