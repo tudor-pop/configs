@@ -7,11 +7,9 @@ antigen bundle git
 antigen bundle pip
 antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle greymd/docker-zsh-completion
 antigen bundle junegunn/fzf
-antigen bundle zsh-autosuge
 
 
 antigen theme denysdovhan/spaceship-prompt
