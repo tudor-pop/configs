@@ -7,8 +7,7 @@ sudo apt-get install zsh
 # change the default shell of the root user to zsh with the chsh command below.
 cp .zshrc ~
 sudo apt install wget git -y
-# OH-MY-ZSH
-sh -y -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+curl -L git.io/antigen > antigen.zsh
 
 ### EXA
 wget https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
@@ -19,18 +18,9 @@ rm exa-*.zip
 
 sudo chsh -s "$(command -v zsh)" "${USER}"
 echo $SHELL
-# install spaceship prompt
-git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-
-# change theme in .zshrc
-sudo sed -i 's/robbyrussell/spaceship/g' ~/.zshrc
-
 #reload terminal
-. ~/.zshrc
+source ~/.zshrc
 
-# add autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # docker
 sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions docker docker-compose)/g' ~/.zshrc
 exec zsh
@@ -38,6 +28,10 @@ exec zsh
 
 echo "alias ll=\"exa -abghHlS -L 1\"" >> ~/.profile
 source ~/.profile
+
+#fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 # Vim setup
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \

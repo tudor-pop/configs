@@ -12,7 +12,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ekalinin/Dockerfile.vim'
-Plug '/usr/local/opt/fzf'
+Plug '~/.fzf'
 call plug#end()
 
 
