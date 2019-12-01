@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo apt-get update
-sudo apt-get upgrade
+# sudo apt-get update
+# sudo apt-get upgrade
 # install zsh
 sudo apt-get install zsh
 # change the default shell of the root user to zsh with the chsh command below.
