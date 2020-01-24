@@ -5,12 +5,13 @@ antigen use oh-my-zsh
 
 antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle greymd/docker-zsh-completion
 antigen bundle junegunn/fzf
 
 
-antigen theme denysdovhan/spaceship-prompt
+#antigen theme denysdovhan/spaceship-prompt
 
 
 antigen apply
@@ -18,6 +19,12 @@ antigen apply
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH="$GOBIN:$PATH"
+#export PATH="$HOME/.fastlane/bin:$PATH"
+source ~/.profile
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -111,4 +118,4 @@ export NVM_DIR="$HOME/.nvm"
 # brew install exa
 alias ll="exa -abghHlS -L 1" 
 setopt HIST_IGNORE_SPACE
-
+eval "$(starship init zsh)"

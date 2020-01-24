@@ -4,6 +4,8 @@
 # sudo apt-get upgrade
 # install zsh
 sudo apt-get install zsh
+curl -fsSL https://starship.rs/install.sh | bash
+
 # change the default shell of the root user to zsh with the chsh command below.
 curl -L git.io/antigen > ~/antigen.zsh
 cp .zshrc ~
