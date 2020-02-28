@@ -10,6 +10,9 @@ brew install wget
 brew install exa
 brew install fzf
 brew install httpie
+brew tap homebrew/cask-fonts
+brew cask install font-fira-code
+
 
 # To install useful key bindings and fuzzy completion:
 $(brew --prefix)/opt/fzf/install
