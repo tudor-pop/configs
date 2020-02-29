@@ -5,6 +5,7 @@
 
 # install zsh
 brew install zsh
+brew install nvm
 brew install starship
 brew install wget
 brew install exa
