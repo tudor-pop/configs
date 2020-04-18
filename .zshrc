@@ -3,22 +3,12 @@
 source ~/antigen.zsh
 antigen use oh-my-zsh
 
-antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle greymd/docker-zsh-completion
 antigen bundle junegunn/fzf
 
-
-#antigen theme denysdovhan/spaceship-prompt
-
-
 antigen apply
-
-export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
-export PATH="$GOBIN:$PATH"
 #export PATH="$HOME/.fastlane/bin:$PATH"
 source ~/.profile
 # Set name of the theme to load --- if set to "random", it will
@@ -106,8 +96,6 @@ source ~/.profile
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias reload="source .zshrc"
-alias audior="sudo launchctl stop com.apple.audio.coreaudiod && sudo launchctl start com.apple.audio.coreaudiod"
-
 
 export NVM_DIR="$HOME/.nvm"
 # Add every binary that requires nvm, npm or node to run to an array of node globals
