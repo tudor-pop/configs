@@ -102,7 +102,8 @@ export NVM_DIR="$HOME/.nvm"
 NODE_GLOBALS=(`find ~/.nvm/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
 NODE_GLOBALS+=("node")
 NODE_GLOBALS+=("nvm")
-
+LC_CTYPE=en_US.UTF-8
+LC_ALL=en_US.UTF-8
 # Lazy-loading nvm + npm on node globals call
 load_nvm () {
   export NVM_DIR=~/.nvm
