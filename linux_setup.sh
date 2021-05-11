@@ -4,7 +4,7 @@
 # sudo apt-get upgrade
 # install zsh
 sudo apt-get install zsh
-curl -fsSL https://starship.rs/install.sh | bash
+curl -fsSL https://starship.rs/install.sh | bash -y
 sudo apt install fonts-firacode
 # change the default shell of the root user to zsh with the chsh command below.
 curl -L git.io/antigen > ~/antigen.zsh
@@ -24,7 +24,7 @@ echo "alias ll=\"exa -abghHlS -L 1\"" >> ~/.profile
 
 #fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+~/.fzf/install -y
 
 # Vim setup
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
