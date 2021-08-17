@@ -4,7 +4,7 @@
 # sudo apt-get upgrade
 # install zsh
 sudo apt-get install zsh
-sudo snap install starship
+sudo sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 sudo apt install fonts-firacode
 # change the default shell of the root user to zsh with the chsh command below.
 curl -L git.io/antigen > ~/antigen.zsh
