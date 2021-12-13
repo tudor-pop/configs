@@ -23,6 +23,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 cp .vimrc ~/
 
+brew install neovim
+
 vim +PlugInstall +qall > /dev/null
 
 sudo chsh -s "$(command -v zsh)" "${USER}"
