@@ -23,7 +23,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 cp .vimrc ~/
 
-brew install neovim
+# brew install neovim
 
 vim +PlugInstall +qall > /dev/null
 
