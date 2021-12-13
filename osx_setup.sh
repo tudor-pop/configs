@@ -18,8 +18,8 @@ cp .zshrc ~
 echo "alias ll=\"exa -abghHlS -L 1\"" >> ~/.profile
 
 # Vim setup
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 cp .vimrc ~/
 
@@ -27,8 +27,6 @@ brew install neovim
 
 vim +PlugInstall +qall > /dev/null
 
-sudo chsh -s "$(command -v zsh)" "${USER}"
-echo $SHELL
 #reload terminal
 source ~/.zshrc
 source ~/.profile
