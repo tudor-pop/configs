@@ -8,14 +8,8 @@ curl -fsSL https://fnm.vercel.app/install | bash
 brew install starship
 brew install wget
 brew install exa
-brew install fzf
-brew install httpie
 brew tap homebrew/cask-fonts
-brew cask install font-fira-code
-
-
-# To install useful key bindings and fuzzy completion:
-$(brew --prefix)/opt/fzf/install
+brew install font-fira-code
 
 # change the default shell of the root user to zsh with the chsh command below.
 curl -L git.io/antigen > ~/antigen.zsh
