@@ -121,3 +121,6 @@ done
 alias ll="exa -abghHlS -L 1" 
 setopt HIST_IGNORE_SPACE
 eval "$(starship init zsh)"
+alias vim="nvim"
+alias vi="nvim"
+alias v="nvim"
