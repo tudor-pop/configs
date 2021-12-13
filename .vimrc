@@ -5,7 +5,7 @@
 " Make sure you use single quotes
 call plug#begin('~/.vim/plugged')
 
-Plug 'https://github.com/joshdick/onedark.vim'
+Plugin 'joshdick/onedark.vim'
 Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'terryma/vim-multiple-cursors'
