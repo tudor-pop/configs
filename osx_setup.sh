@@ -4,8 +4,7 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # install zsh
-brew install zsh
-brew install nvm
+curl -fsSL https://fnm.vercel.app/install | bash
 brew install starship
 brew install wget
 brew install exa
