@@ -97,27 +97,6 @@ source ~/.profile
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias reload="source .zshrc"
 
-export NVM_DIR="$HOME/.nvm"
-# Add every binary that requires nvm, npm or node to run to an array of node globals
-NODE_GLOBALS=(`find ~/.nvm/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
-NODE_GLOBALS+=("node")
-NODE_GLOBALS+=("nvm")
-LC_CTYPE=en_US.UTF-8
-LC_ALL=en_US.UTF-8
-# Lazy-loading nvm + npm on node globals call
-load_nvm () {
-  export NVM_DIR=~/.nvm
-  [ -s "$(brew --prefix nvm)/nvm.sh" ] && . "$(brew --prefix nvm)/nvm.sh"
-}
-
-# Making node global trigger the lazy loading
-for cmd in "${NODE_GLOBALS[@]}"; do
-  eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
-done
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# https://github.com/ogham/exa
-# brew install exa
 alias ll="exa -abghHlS -L 1" 
 setopt HIST_IGNORE_SPACE
 eval "$(starship init zsh)"
