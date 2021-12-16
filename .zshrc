@@ -103,3 +103,4 @@ eval "$(starship init zsh)"
 alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
+export KUBECONFIG=$KUBECONFIG:$(ls ~/.kube | grep conf | awk -v d="$HOME/.kube/" '{ printf "%s%s:", d,$0}')
