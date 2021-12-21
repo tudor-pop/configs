@@ -10,6 +10,7 @@ brew install wget
 brew install exa
 brew tap homebrew/cask-fonts
 brew install font-fira-code
+brew install iproute2mac 
 
 # change the default shell of the root user to zsh with the chsh command below.
 curl -L git.io/antigen > ~/antigen.zsh
