@@ -6,11 +6,11 @@ antigen use oh-my-zsh
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
-
+antigen bundle junegunn/fzf
 
 antigen apply
 #export PATH="$HOME/.fastlane/bin:$PATH"
-source ~/.profile
+#source ~/.profile
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -100,7 +100,29 @@ alias reload="source .zshrc"
 alias ll="exa -abghHlS -L 1" 
 setopt HIST_IGNORE_SPACE
 eval "$(starship init zsh)"
-alias vim="nvim"
-alias vi="nvim"
-alias v="nvim"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/usr/local/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/bin/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/usr/local/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/bin/google-cloud-sdk/completion.zsh.inc'; fi
+eval "$(fnm env)"
+
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# KUBERNETES
 export KUBECONFIG=$KUBECONFIG:$(ls ~/.kube | grep conf | awk -v d="$HOME/.kube/" '{ printf "%s%s:", d,$0}')
+autoload -U +X compinit && compinit
+source <(kubectl completion zsh)
+alias k=kubectl
+compdef __start_kubectl k
+alias kns=kubens
+compdef __start_kubens kns
+alias ktx=kubectx
+compdef __start_kubectx ktx
