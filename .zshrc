@@ -95,6 +95,7 @@ antigen apply
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+eval "$(mcfly init zsh)"
 alias reload="source .zshrc"
 
 alias ll="exa -abghHlS -L 1" 
@@ -117,7 +118,7 @@ eval "$(fnm env)"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # KUBERNETES
-export KUBECONFIG=$KUBECONFIG:$(ls ~/.kube | grep conf | awk -v d="$HOME/.kube/" '{ printf "%s%s:", d,$0}')
+export KUBECONFIG=$KUBECONFIG:$(ls ~/.kube | grep .conf | awk -v d="$HOME/.kube/" '{ printf "%s%s:", d,$0}')
 autoload -U +X compinit && compinit
 source <(kubectl completion zsh)
 alias k=kubectl
@@ -126,3 +127,5 @@ alias kns=kubens
 compdef __start_kubens kns
 alias ktx=kubectx
 compdef __start_kubectx ktx
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
