@@ -20,7 +20,7 @@ sudo mv exa-linux-x86_64 /usr/local/bin/exa
 rm exa-*.zip
 
 echo "alias ll=\"exa -abghHlS -L 1\"" >> ~/.profile
-
+sudo curl -LSfs https://raw.githubusercontent.com/cantino/mcfly/master/ci/install.sh | sudo sh -s -- --git cantino/mcfly
 
 #fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
