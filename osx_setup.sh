@@ -13,6 +13,7 @@ brew install font-fira-code
 brew install iproute2mac 
 brew install kubectx
 brew install isacikgoz/taps/tldr
+brew install derailed/k9s/k9s
 brew tap cantino/mcfly && brew install mcfly
 # change the default shell of the root user to zsh with the chsh command below.
 curl -L git.io/antigen > ~/antigen.zsh
