@@ -18,6 +18,8 @@ brew install iproute2mac
 brew install kubectl
 brew install kubectx
 brew install derailed/k9s/k9s
+
+brew install awscli
  
 brew install isacikgoz/taps/tldr
 brew tap cantino/mcfly && brew install mcfly
