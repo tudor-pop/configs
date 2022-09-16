@@ -11,6 +11,7 @@ brew install exa
 brew tap homebrew/cask-fonts
 brew install font-fira-code
 brew install iproute2mac 
+brew install kubectl
 brew install kubectx
 brew install isacikgoz/taps/tldr
 brew install derailed/k9s/k9s
