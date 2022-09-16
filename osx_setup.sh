@@ -20,6 +20,8 @@ brew install kubectx
 brew install derailed/k9s/k9s
 
 brew install awscli
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
  
 brew install isacikgoz/taps/tldr
 brew tap cantino/mcfly && brew install mcfly
