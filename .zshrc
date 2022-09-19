@@ -118,7 +118,7 @@ eval "$(fnm env)"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # KUBERNETES
-export KUBECONFIG=$KUBECONFIG:$(ls ~/.kube | grep .conf | awk -v d="$HOME/.kube/" '{ printf "%s%s:", d,$0}')
+export KUBECONFIG=$KUBECONFIG:$(ls ~/.kube | grep -e .conf -e config | awk -v d="$HOME/.kube/" '{ printf "%s%s:", d,$0}')
 autoload -U +X compinit && compinit
 source <(kubectl completion zsh)
 alias k=kubectl
