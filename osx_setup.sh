@@ -18,6 +18,8 @@ brew install iproute2mac
 brew install kubectl
 brew install kubectx
 brew install derailed/k9s/k9s
+brew tap blendle/blendle
+brew install kns
 
 brew install awscli
 brew tap hashicorp/tap
