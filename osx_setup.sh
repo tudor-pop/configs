@@ -20,6 +20,7 @@ brew install kubectx
 brew install derailed/k9s/k9s
 brew tap blendle/blendle
 brew install kns
+brew install helm
 
 brew install awscli
 brew tap hashicorp/tap
