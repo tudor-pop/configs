@@ -23,8 +23,9 @@ brew install kns
 brew install helm
 
 brew install awscli
-brew tap hashicorp/tap
-brew install hashicorp/tap/terraform
+brew install tfenv
+tfenv install latest
+tfenv use latest
  
 brew install isacikgoz/taps/tldr
 brew tap cantino/mcfly && brew install mcfly
