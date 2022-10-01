@@ -11,6 +11,10 @@ curl -L git.io/antigen > ~/antigen.zsh
 cp .zshrc ~
 sudo apt install wget git -y
 
+curl -fsSL https://fnm.vercel.app/install | zsh
+
+sudo apt install snapd
+
 
 ### EXA
 wget https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
