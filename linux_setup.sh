@@ -13,8 +13,10 @@ sudo apt install wget git -y
 
 curl -fsSL https://fnm.vercel.app/install | zsh
 
-sudo apt install snapd
-
+sudo apt apt install -y software-properties-common
+sudo add-apt-repository ppa:bashtop-monitor/bashtop
+sudo apt update
+sudo apt install -y bashtop
 
 ### EXA
 wget https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
