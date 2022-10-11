@@ -11,7 +11,7 @@ curl -L git.io/antigen > ~/antigen.zsh
 cp .zshrc ~
 sudo apt install wget git -y
 
-curl -fsSL https://fnm.vercel.app/install | zsh
+curl -fsSL https://fnm.vercel.app/install | bash
 
 sudo apt apt install -y software-properties-common
 sudo add-apt-repository ppa:bashtop-monitor/bashtop
