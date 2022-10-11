@@ -10,9 +10,12 @@ sudo apt install fonts-firacode
 curl -L git.io/antigen > ~/antigen.zsh
 cp .zshrc ~
 sudo apt install wget git -y
+sudo snap install --beta nvim --classic
+
+sudo snap install kubectl --classic
+kubectl version --client
 
 curl -fsSL https://fnm.vercel.app/install | bash
-
 sudo apt apt install -y software-properties-common
 sudo add-apt-repository ppa:bashtop-monitor/bashtop
 sudo apt update
@@ -27,6 +30,9 @@ rm exa-*.zip
 
 echo "alias ll=\"exa -abghHlS -L 1\"" >> ~/.profile
 sudo curl -LSfs https://raw.githubusercontent.com/cantino/mcfly/master/ci/install.sh | sudo sh -s -- --git cantino/mcfly
+
+mkdir ~/.kube
+
 
 #fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
