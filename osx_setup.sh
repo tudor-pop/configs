@@ -23,10 +23,12 @@ brew install kns
 brew install helm
 
 brew install awscli
+
 brew install tfenv
 tfenv install latest
 tfenv use latest
- 
+brew install tfsec
+
 brew install isacikgoz/taps/tldr
 brew tap cantino/mcfly && brew install mcfly
 # change the default shell of the root user to zsh with the chsh command below.
