@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 alias vim=nvim
+alias tf=terraform
+alias python=python3
+export PATH="${PATH}:${HOME}/.krew/bin"
 source ~/antigen.zsh
 antigen use oh-my-zsh
 
