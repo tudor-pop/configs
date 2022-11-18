@@ -29,6 +29,8 @@ tfenv install latest
 tfenv use latest
 brew install tfsec
 
+brew install --cask 1password/tap/1password-cli
+
 brew install isacikgoz/taps/tldr
 brew tap cantino/mcfly && brew install mcfly
 # change the default shell of the root user to zsh with the chsh command below.
