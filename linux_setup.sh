@@ -16,7 +16,7 @@ sudo snap install kubectl --classic
 kubectl version --client
 
 curl -fsSL https://fnm.vercel.app/install | bash
-sudo apt apt install -y software-properties-common
+sudo apt install -y software-properties-common
 sudo add-apt-repository ppa:bashtop-monitor/bashtop
 sudo apt update
 sudo apt install -y bashtop
