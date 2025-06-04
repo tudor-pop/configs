@@ -102,7 +102,7 @@ antigen apply
 eval "$(mcfly init zsh)"
 alias reload="source .zshrc"
 
-alias ll="exa -abghHlS -L 1" 
+alias ll="eza -abghHlS -L 1" 
 setopt HIST_IGNORE_SPACE
 eval "$(starship init zsh)"
 
