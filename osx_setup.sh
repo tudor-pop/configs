@@ -6,7 +6,6 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/tudor/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # install zsh
-curl -fsSL https://fnm.vercel.app/install | bash
 brew install starship
 brew install wget
 brew install eza
