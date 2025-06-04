@@ -9,7 +9,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 curl -fsSL https://fnm.vercel.app/install | bash
 brew install starship
 brew install wget
-brew install exa
+brew install eza
+
+brew install git
+git config --global core.editor "nvim"
 
 brew tap homebrew/cask-fonts
 brew install font-fira-code
