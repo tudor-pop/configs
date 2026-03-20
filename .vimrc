@@ -23,6 +23,9 @@ set laststatus=2
 
 syntax on
 filetype on
+if has('termguicolors')
+  set termguicolors
+endif
 colorscheme onedark
 filetype plugin indent on
 " show existing tab with 4 spaces width

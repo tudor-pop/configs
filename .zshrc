@@ -3,6 +3,7 @@ alias vim=nvim
 alias tf=terraform
 alias python=python3
 alias ll="eza -abghHlS -L 1"
+alias cat=bat
 alias reload="source ~/.zshrc"
 
 # PATH
@@ -31,6 +32,7 @@ if [ -f '/usr/local/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/loc
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Kubernetes
+export KUBE_EDITOR="nvim"
 export KUBECONFIG=$KUBECONFIG:$(ls ~/.kube | grep -e .conf -e config | awk -v d="$HOME/.kube/" '{ printf "%s%s:", d,$0}')
 autoload -U +X compinit && compinit
 source <(kubectl completion zsh)
