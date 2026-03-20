@@ -8,6 +8,12 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew install starship
 brew install wget
 brew install eza
+brew install jq
+brew install yq
+brew install ripgrep
+brew install bat
+brew install gh
+brew install fnm
 
 brew install git
 git config --global core.editor "nvim"
@@ -20,6 +26,7 @@ brew install kubectl
 brew install kubectx
 brew install derailed/k9s/k9s
 brew install helm
+brew install argocd
 
 # AWS
 brew install awscli
@@ -53,5 +60,8 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 cp .vimrc ~/
 vim +PlugInstall +qall > /dev/null
+
+# SDKMAN (Java/Maven version manager)
+curl -s "https://get.sdkman.io" | bash
 
 echo "Setup complete. Restart your terminal to apply changes."
