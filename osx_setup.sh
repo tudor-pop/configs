@@ -59,6 +59,8 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 cp .vimrc ~/
+mkdir -p ~/.config/nvim
+ln -sf ~/.vimrc ~/.config/nvim/init.vim
 vim +PlugInstall +qall > /dev/null
 
 # SDKMAN (Java/Maven version manager)

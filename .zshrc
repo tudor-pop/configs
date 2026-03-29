@@ -1,3 +1,22 @@
+# Word style: respect camelCase boundaries for Option+Backspace/Delete
+WORDCHARS=''
+autoload -U select-word-style
+select-word-style bash
+# Treat uppercase letters as word boundaries (subword/humpCase navigation)
+zstyle ':zle:*' word-style unspecified
+zstyle ':zle:*backward-kill-word' word-style subword
+zstyle ':zle:*backward-word' word-style subword
+zstyle ':zle:*forward-word' word-style subword
+zstyle ':zle:*forward-kill-word' word-style subword
+zstyle ':zle:*kill-word' word-style subword
+
+# Up/Down arrow: prefix-based history search
+autoload -U history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^[[A" history-beginning-search-backward-end
+bindkey "^[[B" history-beginning-search-forward-end
+
 # Aliases
 alias vim=nvim
 alias tf=terraform
@@ -44,3 +63,9 @@ alias ktx=kubectx
 compdef __start_kubectx ktx
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
+# bun completions
+[ -s "/Users/mimedia/.bun/_bun" ] && source "/Users/mimedia/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
