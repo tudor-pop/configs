@@ -43,9 +43,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 cp .vimrc ~/
-chown -R $USER:$USER $HOME/.vim/autoload
-chown -R $USER:$USER $HOME/.vim
-chown -R $USER:$USER $HOME/.vim/autoload/
 vim +PlugInstall +qall > /dev/null
 
 sudo chsh -s "$(command -v zsh)" "${USER}"

@@ -78,7 +78,7 @@ compdef __start_kubectx ktx
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 # bun completions
-[ -s "/Users/mimedia/.bun/_bun" ] && source "/Users/mimedia/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
