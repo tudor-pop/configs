@@ -36,6 +36,7 @@ brew install awscli
 
 # Terraform
 brew install tfenv
+eval "$(/opt/homebrew/bin/brew shellenv)"
 tfenv install latest
 tfenv use latest
 brew install trivy
