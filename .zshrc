@@ -43,40 +43,47 @@ alias reload="source ~/.zshrc"
 export PATH="${PATH}:${HOME}/.krew/bin"
 
 # Zsh plugins (brew-installed)
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-fpath=($(brew --prefix)/share/zsh-completions $fpath)
+if command -v brew &>/dev/null; then
+  BREW_PREFIX="$(brew --prefix)"
+  [ -f "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && source "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+  [ -f "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ] && source "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+  [ -d "$BREW_PREFIX/share/zsh-completions" ] && fpath=("$BREW_PREFIX/share/zsh-completions" $fpath)
+fi
 
 # Shell tools
-eval "$(mcfly init zsh)"
+command -v mcfly &>/dev/null && eval "$(mcfly init zsh)"
 setopt HIST_IGNORE_SPACE
-eval "$(starship init zsh)"
-eval "$(fnm env)"
+command -v starship &>/dev/null && eval "$(starship init zsh)"
+command -v fnm &>/dev/null && eval "$(fnm env)"
 
 # SDKMAN
 export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
 # Google Cloud SDK
-if [ -f '/usr/local/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/bin/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/usr/local/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/bin/google-cloud-sdk/completion.zsh.inc'; fi
+for gcloud_dir in /usr/local/bin/google-cloud-sdk "$HOME/google-cloud-sdk"; do
+  [ -f "$gcloud_dir/path.zsh.inc" ] && source "$gcloud_dir/path.zsh.inc"
+  [ -f "$gcloud_dir/completion.zsh.inc" ] && source "$gcloud_dir/completion.zsh.inc"
+done
 
 # iTerm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Kubernetes
 export KUBE_EDITOR="nvim"
-export KUBECONFIG=$KUBECONFIG:$(ls ~/.kube | grep -e .conf -e config | awk -v d="$HOME/.kube/" '{ printf "%s%s:", d,$0}')
+if [ -d "$HOME/.kube" ]; then
+  export KUBECONFIG=$KUBECONFIG:$(ls ~/.kube | grep -e .conf -e config | awk -v d="$HOME/.kube/" '{ printf "%s%s:", d,$0}')
+fi
 autoload -U +X compinit && compinit
-source <(kubectl completion zsh)
-alias k=kubectl
-compdef __start_kubectl k
-alias kns=kubens
-compdef __start_kubens kns
-alias ktx=kubectx
-compdef __start_kubectx ktx
+if command -v kubectl &>/dev/null; then
+  source <(kubectl completion zsh)
+  alias k=kubectl
+  compdef __start_kubectl k
+fi
+command -v kubens &>/dev/null && alias kns=kubens && compdef __start_kubens kns
+command -v kubectx &>/dev/null && alias ktx=kubectx && compdef __start_kubectx ktx
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
+[ -x /opt/homebrew/bin/terraform ] && complete -o nospace -C /opt/homebrew/bin/terraform terraform
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
