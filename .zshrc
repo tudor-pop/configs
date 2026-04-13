@@ -74,7 +74,7 @@ export KUBE_EDITOR="nvim"
 if [ -d "$HOME/.kube" ]; then
   export KUBECONFIG=$KUBECONFIG:$(ls ~/.kube | grep -e .conf -e config | awk -v d="$HOME/.kube/" '{ printf "%s%s:", d,$0}')
 fi
-autoload -U +X compinit && compinit
+autoload -U +X compinit && compinit -i
 if command -v kubectl &>/dev/null; then
   source <(kubectl completion zsh)
   alias k=kubectl
