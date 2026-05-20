@@ -17,6 +17,7 @@ brew install ripgrep
 brew install bat
 brew install gh
 brew install fnm
+brew install direnv
 
 brew install git
 git config --global core.editor "nvim"

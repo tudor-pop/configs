@@ -55,6 +55,7 @@ command -v mcfly &>/dev/null && eval "$(mcfly init zsh)"
 setopt HIST_IGNORE_SPACE
 command -v starship &>/dev/null && eval "$(starship init zsh)"
 command -v fnm &>/dev/null && eval "$(fnm env)"
+command -v direnv &>/dev/null && eval "$(direnv hook zsh)"
 
 # SDKMAN
 export SDKMAN_DIR="$HOME/.sdkman"
